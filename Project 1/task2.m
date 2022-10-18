@@ -45,7 +45,7 @@ D = zeros([4 4]);
 
 % Eigenvalues 
 eigA = eig(A);
-J = jordan(A);
+J = jordan(A)
 
 % Answer = no
 % Not all jordan blocks associate with eig = 0 are 1x1 

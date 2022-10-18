@@ -96,15 +96,8 @@ C = [eye(3) zeros([3 9]);
 D = zeros([4 4]);
 
 % compute transfer function of system
-inv = inv(sI - A);
-Gs = C*inv*B + D;
+tf = tf(ss(A,B,C,D))
 
-% Analyse output of system
-syms u1 u2 u3 u4;
-Us = [u1 u2 u3 u4].';
-Y = Gs*Us;
-Yz = Y(3);
-Yp = Y(4);
 
 
 
